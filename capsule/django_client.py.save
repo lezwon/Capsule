@@ -27,8 +27,11 @@ class LocalDjangoCapsuleClient():
         if(id is None):
             id = x.public_key.id
 
+        print(x.serialize())
+        print(id)
         url = 'http://'+self.host+':'+self.port+"/decrypt/"+str(id)+'/'
-        r = requests.post(url, data=x.serialize().decode('ISO-8859-1'))
+        print(url)
+        r = requests.post(url, data=x.serialize().decode(ISO-8859-1))
         try:
             out = syft.tensor.TensorBase.deserialize(r.content)
         except Exception as e:
