@@ -5,3 +5,4 @@ capsule.egg-info/
 *.rdb
 */*.rdb
 *.sqlite3
+notebooks/.ipynb_checkpoints
